@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron text-center" style="padding: 1%; margin-top: 1%;">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+
+    <div class="row" id="latest-mars-news">
+      <div class="col-md-12">
+        <h3>Latest Mars News</h3>
+        <p style="padding-bottom: 0; margin-bottom: 0; padding-top: 0; margin-top: 0;"><b>{{listings.news_title}}</b></p>
+        <p style="padding-top: 0; margin-top: 0;">{{listings.news_p}}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-7" id="featured-image">
+        <h3>Featured Mars Image</h3>
+        <img src={{listings.mars_featured_img}} style="max-width: 100%;">
+      </div>
+      <div class="col-md-5">
+        <div id="mars_weather" style="border: solid 1px; margin-top: 2%; padding: 1%">
+        <p><b>Current Weather on Mars</b></p>
+        <p>{{listings.mars_weather}}</p>
+      </div>
+      <table border="1" class="dataframe" style="margin-top: 5%;">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>value</th>
+    </tr>
+    <tr>
+      <th>description</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Equatorial Diameter:</th>
+      <td>6,792 km</td>
+    </tr>
+    <tr>
+      <th>Polar Diameter:</th>
+      <td>6,752 km</td>
+    </tr>
+    <tr>
+      <th>Mass:</th>
+      <td>6.42 x 10^23 kg (10.7% Earth)</td>
+    </tr>
+    <tr>
+      <th>Moons:</th>
+      <td>2 (Phobos &amp; Deimos)</td>
+    </tr>
+    <tr>
+      <th>Orbit Distance:</th>
+      <td>227,943,824 km (1.52 AU)</td>
+    </tr>
+    <tr>
+      <th>Orbit Period:</th>
+      <td>687 days (1.9 years)</td>
+    </tr>
+    <tr>
+      <th>Surface Temperature:</th>
+      <td>-153 to 20 °C</td>
+    </tr>
+    <tr>
+      <th>First Record:</th>
+      <td>2nd millennium BC</td>
+    </tr>
+    <tr>
+      <th>Recorded By:</th>
+      <td>Egyptian astronomers</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3 style="text-align: center; padding-top: 2%">Mars Hemispheres</h3>
+      </div>
+    </div>
+
+    <div class="row" style="padding-top: 1%;">
+      <div class="col-md-6">
+        <img src={{listings.mars_hemispheres[0]['img_url']}} style="max-width: 100%;">
+        <h4>{{listings.mars_hemispheres[0]['title']}}</h4>
+      </div>
+      <div class="col-md-6">
+        <img src={{listings.mars_hemispheres[1]['img_url']}} style="max-width: 100%;">
+        <h4>{{listings.mars_hemispheres[1]['title']}}</h4>
+      </div>
+    </div>
+
+    <div class="row" style="padding-top: 1%; padding-bottom: 1%;">
+      <div class="col-md-6">
+        <img src={{listings.mars_hemispheres[2]['img_url']}} style="max-width: 100%;">
+        <h4>{{listings.mars_hemispheres[2]['title']}}</h4>
+      </div>
+      <div class="col-md-6">
+        <img src={{listings.mars_hemispheres[3]['img_url']}} style="max-width: 100%;">
+        <h4>{{listings.mars_hemispheres[3]['title']}}</h4>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
